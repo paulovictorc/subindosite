@@ -1,0 +1,488 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    width: 80%;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+@media (max-width: 980px) {
+body {
+    width: 100%;
+}
+
+}
+
+
+/* Fundo Principal com Imagem */
+    .hero {
+background-image: url('1.png'); /* Substitua com a imagem desejada */
+background-size: contain; /* Ajusta a imagem para caber no contêiner */
+background-repeat: no-repeat; /* Evita que a imagem se repita */
+background-position: center; /* Centraliza a imagem no contêiner */
+height: 50vh; /* Ajusta a altura para 50% da altura da viewport */
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+position: relative;
+width: 100%;
+margin-top: 0; /* Remove o espaçamento superior */
+}
+
+.hero h1 {
+font-size: 5vw; /* Ajusta o tamanho da fonte proporcionalmente */
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+font-family: "Dancing Script", cursive;
+font-weight: 700; /* Defina o peso da fonte conforme desejado */
+font-style: normal;
+}
+
+@media (min-width: 1000px) {
+.hero {
+height: 500px; /* Altura fixa para telas grandes */
+}
+
+.hero h1 {
+font-size: 3rem; /* Tamanho da fonte ajustado para telas grandes */
+}
+}
+/* Ajuste adicional para espaçamento entre o menu e o hero */
+@media (max-width: 900px) {
+.hero {
+    height: 40vh; /* Ajusta a altura do hero em telas menores para reduzir o espaço */
+}
+}
+
+@media (max-width: 600px) {
+.hero {
+    height: 30vh; /* Ajusta a altura do hero ainda mais para telas muito pequenas */
+}
+}
+
+/* Menu abaixo do título */
+        nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Adiciona cor de fundo para melhorar a visibilidade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o menu */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    text-align: center;
+    padding: 5px 0; /* Ajusta o padding para criar menos espaço */
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 2vw; /* Usa unidades relativas para margem */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; /* Usa unidades relativas para tamanho da fonte */
+}
+
+nav a:hover {
+    color: #EEBA7A;
+}
+
+@media (max-width: 870px) {
+nav a{
+    font-size: 15px; /* Usa unidades relativas para tamanho da fonte */
+}
+}
+
+
+@media (max-width: 410px) {
+nav a{
+    font-size: 12px; /* Usa unidades relativas para tamanho da fonte */
+}
+}
+
+
+/* Banner Slider */
+.banner {
+    position: relative;
+    width: 100%; /* Ajusta a largura do slider */
+    height: 400px;
+    overflow: hidden;
+  
+    
+}
+.banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Sobre a Loja */
+.sobre-loja {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #000000;
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+  
+}
+.sobre-loja img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.sobre-loja .texto {
+    flex: 1;
+    color: #EEBA7A;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.sobre-loja h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.sobre-loja p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+    @media (max-width: 850px) {
+.sobre-loja {
+    flex-direction: column; /* Coloca o texto abaixo da imagem */
+    align-items: center; /* Centraliza o conteúdo */
+    text-align: center; /* Centraliza o texto */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.sobre-loja .texto {
+    margin-top: 20px; /* Espaçamento entre a imagem e o texto, se necessário */
+    width: 90%; /* Ajusta a largura do texto para caber melhor em telas pequenas */
+}
+}
+
+/* Produtos em Destaque - Lado a Lado */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    
+}
+.produto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Promoções e Produtos Únicos */
+/* Título das seções */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
+    
+}
+.section-title:hover {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
+    color: #EEBA7A;
+}
+
+/* Estilo para as seções de promoções e produtos únicos */
+.promocoes, .produtos-unicos {
+    padding: 40px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column; /* Garante que o texto fique em cima e os produtos abaixo em formato vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo para os produtos dentro das seções */
+.promocoes .produto, .produtos-unicos .produto {
+    margin: 20px 0; /* Espaçamento vertical entre os produtos */
+    width: 80%; /* Largura do produto */
+    max-width: 300px; /* Limita a largura máxima do produto */
+    text-align: center; /* Centraliza o texto e a imagem do produto */
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+
+/* Estilo para a seção de categorias */
+.categorias {
+display: flex;
+justify-content: center; /* Centraliza os itens horizontalmente */
+align-items: center; /* Alinha os itens verticalmente */
+gap: 5%; /* Espaçamento entre as categorias */
+padding: 40px;
+background-color: white;
+text-align: center;
+}
+
+/* Estilo para cada categoria */
+.categoria {
+text-align: center;
+width: 20vw; /* Largura proporcional ao viewport */
+
+}
+
+/* Estilo para os links das categorias */
+.categoria a {
+text-decoration: none;
+color: black;
+}
+
+/* Estilo para as imagens redondas das categorias */
+.imagem-redonda {
+width: 20vw; /* Largura proporcional ao viewport */
+height: 20vw; /* Altura proporcional ao viewport */
+max-width: 200px; /* Limite máximo de largura */
+max-height: 200px; /* Limite máximo de altura */
+border-radius: 30%;
+object-fit: cover;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease-in-out;
+}
+
+.imagem-redonda:hover {
+transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+/* Estilo para o texto das categorias */
+.categoria h3 {
+margin-top: 15px;
+font-size: 40px; /* Tamanho da fonte proporcional ao viewport */
+font-family: "Dancing Script", cursive;
+}
+
+/* Ajuste para o hover do texto das categorias */
+.categoria h3:hover {
+color: #EEBA7A;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1200px) {
+.categorias {
+gap: 5%; /* Reduz o espaçamento entre as categorias */
+}
+
+.categoria {
+width: 25vw; /* Ajusta a largura proporcional ao viewport */
+}
+
+.imagem-redonda {
+width: 25vw; /* Ajusta a largura proporcional ao viewport */
+height: 25vw; /* Ajusta a altura proporcional ao viewport */
+}
+
+.categoria h3 {
+font-size: 40px; /* Ajusta o tamanho da fonte proporcionalmente */
+}
+}
+
+@media (max-width: 900px) {
+.categorias {
+gap: 5%; /* Reduz o espaçamento entre as categorias */
+}
+
+.categoria {
+width: 30vw; /* Ajusta a largura proporcional ao viewport */
+}
+
+.imagem-redonda {
+width: 180px; /* Ajusta a largura proporcional ao viewport */
+height: 180px; /* Ajusta a altura proporcional ao viewport */
+}
+
+.categoria h3 {
+font-size: 35px; /* Ajusta o tamanho da fonte proporcionalmente */
+}
+}
+
+@media (max-width: 600px) {
+.categorias {
+ /* Alinha as categorias em coluna */
+gap: 3%; /* Aumenta o espaçamento entre as categorias */
+}
+
+.categoria {
+width: 80vw; /* Ajusta a largura proporcional ao viewport */
+}
+
+.imagem-redonda {
+width: 150px; /* Ajusta a largura proporcional ao viewport */
+height: 150px; /* Ajusta a altura proporcional ao viewport */
+}
+
+.categoria h3 {
+font-size: 25px; /* Ajusta o tamanho da fonte proporcionalmente */
+}
+}
+@media (max-width: 420px) {
+.imagem-redonda {
+width: 130px; /* Ajusta a largura proporcional ao viewport */
+height: 130px; /* Ajusta a altura proporcional ao viewport */
+}
+}
+
+
+/* Seção com imagens e textos */
+.infos-rede-sociais {
+display: flex;
+justify-content: space-between;
+padding: 40px;
+background-color: #000000;
+width: 90%; /* Ajusta a largura da seção para que ocupe mais espaço em telas menores */
+margin: 0 auto; /* Centraliza a seção */
+}
+
+/* Coluna esquerda (imagens e textos das redes sociais) */
+.coluna-esquerda {
+display: flex;
+flex-direction: column; /* Organiza os itens um sobre o outro */
+gap: 20px; /* Espaçamento entre os itens */
+width: 45%; /* Ocupa 45% da largura da seção */
+margin-left: 0px;
+
+}
+
+/* Ajusta a ordem dos itens na coluna esquerda em telas menores */
+.info-item {
+display: flex;
+flex-direction: column; /* Organiza o texto em cima da imagem */
+align-items: center;
+gap: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.imagem-rede-social {
+width: 70px; /* Largura das imagens das redes sociais */
+height: 70px; /* Altura das imagens */
+border-radius: 30%; /* Imagens redondas */
+}
+
+/* Estilo para os links */
+.info-item a {
+color: #ffffff; /* Cor do texto do link */
+text-decoration: none; /* Remove o sublinhado */
+font-size: 1.4rem; /* Tamanho da fonte */
+font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-item a:hover {
+color: #EEBA7A; /* Cor do texto ao passar o mouse */
+}
+
+/* Coluna direita (texto completo) */
+.coluna-direita {
+width: 45%; /* Ocupa 45% da largura da seção */
+text-align: center; /* Justifica o texto */
+font-size: 1.6rem; /* Tamanho da fonte */
+font-family: "Dancing Script", cursive;
+color: #ffffff;
+margin-right: 150px;
+margin-top: 50px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1200px) {
+.infos-rede-sociais {
+width: 85%; /* Ajusta a largura da seção */
+padding: 30px; /* Reduz o padding */
+}
+
+.coluna-esquerda,
+.coluna-direita {
+width: 48%; /* Ajusta a largura das colunas */
+}
+.coluna-direita {
+margin-top: 10px;
+}
+
+.info-item a {
+font-size: 1.1rem; /* Reduz o tamanho da fonte dos links */
+}
+
+.imagem-rede-social {
+width: 50px; /* Reduz a largura das imagens */
+height: 50px; /* Reduz a altura das imagens */
+}
+}
+
+@media (max-width: 900px) {
+.infos-rede-sociais {
+flex-direction: column; /* Alinha as colunas em uma coluna */
+align-items: center; /* Centraliza as colunas */
+width: 100%; /* Ajusta a largura da seção */
+padding: 20px; /* Reduz o padding */
+
+}
+
+.coluna-esquerda,
+.coluna-direita {
+width: 90%; /* Ajusta a largura das colunas */
+margin: 0; /* Remove as margens laterais */
+}
+
+.info-item {
+flex-direction: column; /* Garante que o texto fique acima da imagem */
+align-items: center; /* Centraliza o conteúdo */
+}
+
+.info-item a {
+font-size: 1rem; /* Reduz o tamanho da fonte dos links */
+}
+
+.imagem-rede-social {
+width: 40px; /* Reduz a largura das imagens */
+height: 40px; /* Reduz a altura das imagens */
+}
+}
+
+@media (max-width: 600px) {
+.infos-rede-sociais {
+padding: 10px; /* Reduz o padding */
+}
+
+.coluna-esquerda,
+.coluna-direita {
+width: 100%; /* Ajusta a largura das colunas */
+margin: 0; /* Remove as margens laterais */
+text-align: center; /* Centraliza o texto */
+}
+
+.info-item {
+flex-direction: column; /* Garante que o texto fique acima da imagem */
+align-items: center; /* Centraliza o conteúdo */
+}
+
+.info-item a {
+font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+}
+
+.imagem-rede-social {
+width: 30px; /* Reduz a largura das imagens */
+height: 30px; /* Reduz a altura das imagens */
+}
+}
+</style>
